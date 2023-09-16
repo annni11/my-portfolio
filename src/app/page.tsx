@@ -2,11 +2,11 @@ import Experience from './components/Experience';
 import NavBar from './components/NavBar';
 import About from './components/About';
 import Projects from './components/Projects';
-import Yoga from './components/Yoga';
-import Books from './components/Books';
+
 import Connect from './components/Connect';
 import Footer from './components/Footer';
 import Pic from './components/Pic';
+import Blog from './components/Blog';
 
 export default function Home() {
   return (
@@ -26,8 +26,7 @@ export default function Home() {
           <About />
           <Experience />
           <Projects />
-          <Yoga />
-          <Books />
+          <Blog />
           <Connect />
         </div>
       </div>

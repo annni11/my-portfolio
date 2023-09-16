@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <div id='projects'>
+    <>
       <p>hellohellohellohellohellohellohellohellohellohello</p>
       <p>hellohellohellohellohellohellohellohellohellohello</p>
       <p>hellohellohellohellohellohellohellohellohellohello</p>
@@ -18,6 +18,6 @@ export default function Projects() {
       <p>hellohellohellohellohellohellohellohellohellohello</p>
       <p>hellohellohellohellohellohellohellohellohellohello</p>
       <p>hellohellohellohellohellohellohellohellohellohello</p>
-    </div>
+    </>
   );
 }
