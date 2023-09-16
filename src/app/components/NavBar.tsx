@@ -1,77 +1,73 @@
+'use client';
+import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
-export default function NavBar() {
+function NavBar() {
+  const [navbar, setNavbar] = useState(false);
   return (
-    <div className='fixed w-full z-20 top-0 left-0'>
-      <div
-        id='nav'
-        className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-        <div className='flex md:order-1'>
-          <Link href='#home'>
-            <button
-              type='button'
-              className='relative text-purple-400 text-xl w-fit block'>
-              AN
-            </button>
-          </Link>
+    <div>
+      <nav className='w-full fixed top-0 left-0 right-0 z-10'>
+        <div className='justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8'>
+          <div>
+            <div className='flex items-center justify-between py-3 md:py-5 md:block'>
+              {/* LOGO */}
+              <Link href='/'>
+                <h2 className='text-2xl text-cyan-600 font-bold '>LOGO</h2>
+              </Link>
+              {/* HAMBURGER BUTTON FOR MOBILE */}
+              <div className='md:hidden'>
+                <button
+                  className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'
+                  onClick={() => setNavbar(!navbar)}>
+                  {navbar ? (
+                    <Image src='/close.svg' width={30} height={30} alt='logo' />
+                  ) : (
+                    <Image
+                      src='/hamburger-menu.svg'
+                      width={30}
+                      height={30}
+                      alt='logo'
+                      className='focus:border-none active:border-none'
+                    />
+                  )}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                navbar ? 'p-12 md:p-0 block' : 'hidden'
+              }`}>
+              <ul className='h-screen md:h-auto items-center justify-center md:flex '>
+                <li className='pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent'>
+                  <Link href='#about' onClick={() => setNavbar(!navbar)}>
+                    About
+                  </Link>
+                </li>
+                <li className='pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent'>
+                  <Link href='#connect' onClick={() => setNavbar(!navbar)}>
+                    Blogs
+                  </Link>
+                </li>
+                <li className='pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent'>
+                  <Link href='#contact' onClick={() => setNavbar(!navbar)}>
+                    Contact
+                  </Link>
+                </li>
+                <li className='pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent'>
+                  <Link href='#projects' onClick={() => setNavbar(!navbar)}>
+                    Projects
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div
-          className='items-center justify-between w-min md:flex md:w-auto md:order-2'
-          id='navbar-sticky'>
-          <ul className='flex flex-row flex-wrap gap-0 p-4 md:p-0 font-medium md:flex-row md:gap-5 md:mt-0 '>
-            <li>
-              <Link
-                href='#home'
-                className='relative text-l w-fit block after:block after:content-after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'
-                aria-current='page'>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='#about'
-                className='relative text-l w-fit block after:block after:content-after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='#experience'
-                className='relative text-l w-fit block after:block after:content-after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'>
-                Experience
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='#projects'
-                className='relative text-l w-fit block after:block after:content-after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='#yoga'
-                className='relative text-l w-fit block after:block after:content-after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'>
-                Yoga
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='#books'
-                className='relative text-l w-fit block after:block after:content-after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'>
-                Book Recs
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='#connect'
-                className='relative text-l w-fit block after:block after:content-after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center '>
-                Connect
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+      </nav>
     </div>
   );
 }
+
+export default NavBar;

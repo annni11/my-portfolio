@@ -10,27 +10,27 @@ import Pic from './components/Pic';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between -24 container mx-auto'>
-      <div className='grid grid-cols-1 gap-10 items-center font-mono text-sm'>
-        <header className='fixed w-full z-20 top-0 inline-block m-auto'>
-          <NavBar></NavBar>
-        </header>
-
-        <section className='grid grid-cols-1 gap-10 items-center'>
-          <Pic></Pic>
-          <About></About>
-          <Experience></Experience>
-          <Projects></Projects>
-
-          <Yoga></Yoga>
-
-          <Books></Books>
-          <Connect></Connect>
-          <footer className='fixed w-full z-20 bottom-0 inline-block m-auto'>
-            <Footer></Footer>
-          </footer>
-        </section>
+    <div>
+      <NavBar />
+      <div className='flex flex-row flex-wrap py-20'>
+        <aside
+          id='left-side'
+          className='bg-blue-500 w-full sm:w-1/3 md:1/4 px-2'>
+          <div className='sticky top-16 p-4'>
+            <Pic />
+          </div>
+        </aside>
+        <div
+          id='right-side'
+          className='bg-red-500 w-full sm:w-2/3 md:w3/4 pt-1 px-2'>
+          <About />
+          <Experience />
+          <Projects />
+          <Yoga />
+          <Books />
+          <Connect />
+        </div>
       </div>
-    </main>
+    </div>
   );
 }
