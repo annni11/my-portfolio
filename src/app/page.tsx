@@ -1,11 +1,11 @@
-import Experience from './components/Experience';
+import Experience from './experience/page';
 import NavBar from './components/NavBar';
-import About from './components/About';
-import Projects from './components/Projects';
+import About from './about/page';
+import Projects from './projects/page';
 import Connect from './components/Connect';
-import Footer from './components/Footer';
 import Pic from './components/Pic';
-import Blog from './components/Blog';
+import Blog from './blog/page';
+import Info from './components/Info';
 
 export default function Home() {
   return (
@@ -23,9 +23,9 @@ export default function Home() {
           <Projects />
           <Blog />
           <Connect />
+          <Info />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

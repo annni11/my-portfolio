@@ -5,14 +5,14 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 250, 245, 255;
-  --background-end-rgb: 250, 245, 255;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 18, 18, 18;
-    --background-end-rgb: 18, 18, 18;
+    --background-start-rgb: 9, 9, 11;
+    --background-end-rgb: 39, 39, 42;
   }
 }
 
@@ -28,8 +28,4 @@ body {
 
 #nav {
   background: rgb(var(--background-start-rgb));
-}
-
-footer {
-  background: rgb(var(--background-end-rgb));
 }
