@@ -1,6 +1,7 @@
 export default function Blog() {
   return (
-    <>
+    <section id='blog' className='pt-20 bg-purple-100'>
+      <h1 className='text-lg text-purple-400'>Blog</h1>
       <p>BLOGGGGGGGgggGGGgGGGGGGGGGGGGGGGGGG</p>
       <p>BLOGGGGGGGgggGGGgGGGGGGGGGGGGGGGGGG</p>
       <p>BLOGGGGGGGgggGGGgGGGGGGGGGGGGGGGGGG</p>
@@ -18,6 +19,6 @@ export default function Blog() {
       <p>BLOGGGGGGGgggGGGgGGGGGGGGGGGGGGGGGG</p>
       <p>BLOGGGGGGGgggGGGgGGGGGGGGGGGGGGGGGG</p>
       <p>BLOGGGGGGGgggGGGgGGGGGGGGGGGGGGGGGG</p>
-    </>
+    </section>
   );
 }

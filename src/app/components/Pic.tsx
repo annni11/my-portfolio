@@ -2,10 +2,8 @@ import Image from 'next/image';
 
 export default function Pic() {
   return (
-    <>
-      <h1>Annabelle Ni</h1>
-      <h2>Yoga Who Codes</h2>
-      <div style={{ borderRadius: '5px', overflow: 'hidden' }}>
+    <aside className='pt-20'>
+      <div style={{ borderRadius: '250px', overflow: 'hidden' }}>
         <Image
           src='/pp1.png'
           width={500}
@@ -14,6 +12,8 @@ export default function Pic() {
           priority={true}
         />
       </div>
-    </>
+      <h1 className='text-lg text-center'>Annabelle Ni</h1>
+      <h2 className='text-base italic text-center'>Yogi who Codes</h2>
+    </aside>
   );
 }
