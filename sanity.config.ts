@@ -8,3 +8,5 @@ const config = defineConfig({
   basePath: '/admin',
   plugins: [deskTool()],
 });
+
+export default config;

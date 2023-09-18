@@ -22,11 +22,12 @@ export default function About() {
       <p>
         I am a full-stack software engineer <Computer />
       </p>
+
       <p>
         My current location is <PushPin /> NYC
       </p>
       <br />
-      <p>Why yoga and coding?</p>
+      <p>Why I love yoga and coding:</p>
       <p className='italic'>
         yoga and coding have more similarities than you think!
       </p>
@@ -35,7 +36,7 @@ export default function About() {
         <li>It's a challenge but sky is the limit and learning never ends</li>
         <li>Freedom to be creative and expressive</li>
         <li>The community and collaboration</li>
-        <li>Takes focus, routine, and dicipline</li>
+        <li>Takes focus, practice, routine, and dicipline</li>
       </ul>
       <br />
       <p>Some more hobbies:</p>
@@ -65,27 +66,27 @@ export default function About() {
       <br />
       <p>My tech stack:</p>
       <ul className='flex flex-wrap gap-3'>
-        <li className='bg-purple-300'>JavaScript</li>
-        <li className='bg-purple-300'>TypeScript</li>
-        <li className='bg-purple-300'>React</li>
-        <li className='bg-purple-300'>Next.js</li>
-        <li className='bg-purple-300'>Tailwind CSS</li>
-        <li className='bg-purple-300'>Node.js</li>
-        <li className='bg-purple-300'>Express</li>
-        <li className='bg-purple-300'>SQL</li>
-        <li className='bg-purple-300'>NoSQL</li>
-        <li className='bg-purple-300'>Webpack</li>
-        <li className='bg-purple-300'>Docker</li>
-        <li className='bg-purple-300'>TDD (Jest, SuperTest)</li>
-        <li className='bg-purple-300'>Authentication (BCrypt, OAuth)</li>
+        <li className='bg-purple-400'>JavaScript</li>
+        <li className='bg-purple-400'>TypeScript</li>
+        <li className='bg-purple-400'>React</li>
+        <li className='bg-purple-400'>Next.js</li>
+        <li className='bg-purple-400'>Tailwind CSS</li>
+        <li className='bg-purple-400'>Node.js</li>
+        <li className='bg-purple-400'>Express</li>
+        <li className='bg-purple-400'>SQL</li>
+        <li className='bg-purple-400'>NoSQL</li>
+        <li className='bg-purple-400'>Webpack</li>
+        <li className='bg-purple-400'>Docker</li>
+        <li className='bg-purple-400'>TDD (Jest, SuperTest)</li>
+        <li className='bg-purple-400'>Authentication (BCrypt, OAuth)</li>
 
-        <li className='bg-purple-300'>Git</li>
-        <li className='bg-purple-300'>
+        <li className='bg-purple-400'>Git</li>
+        <li className='bg-purple-400'>
           AWS (Elastic Beanstalk, EC2, S3, RDS, IAM)
         </li>
-        <li className='bg-purple-300'>Google Cloud Console</li>
-        <li className='bg-purple-300'>Figma</li>
-        <li className='bg-purple-300'>Jira</li>
+        <li className='bg-purple-400'>Google Cloud Console</li>
+        <li className='bg-purple-400'>Figma</li>
+        <li className='bg-purple-400'>Jira</li>
       </ul>
     </section>
   );
