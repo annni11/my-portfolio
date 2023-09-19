@@ -6,14 +6,23 @@
   --foreground-rgb: 10, 9, 11;
   --background-start-rgb: 250, 245, 255;
   --background-end-rgb: 255, 255, 255;
+  --purple: 216, 180, 254;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark){
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 250, 245, 255;
     --background-start-rgb: 16, 16, 20;
     --background-end-rgb: 10, 9, 11;
+    --purple: 192, 132, 252;
   }
+} */
+
+[data-theme='dark'] {
+  --foreground-rgb: 250, 245, 255;
+  --background-start-rgb: 16, 16, 20;
+  --background-end-rgb: 10, 9, 11;
+  --purple: 192, 132, 252;
 }
 
 body {
@@ -28,4 +37,8 @@ body {
 
 #nav {
   background: rgb(var(--background-start-rgb));
+}
+
+#purple {
+  background-color: rgb(var(--purple));
 }

@@ -6,6 +6,7 @@ import Connect from './components/Connect';
 import Pic from './components/Pic';
 import Blog from './blog/page';
 import Info from './components/Info';
+import { ThemeProvider } from 'next-themes';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           <About />
           <Experience />
           <Projects />
+          {/* @ts-expect-error Server Component */}
           <Blog />
           <Connect />
           <Info />

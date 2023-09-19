@@ -32,8 +32,12 @@ export default function About() {
         yoga and coding have more similarities than you think!
       </p>
       <ul className='list-disc'>
-        <li>There's always more than one way to get to the desired result</li>
-        <li>It's a challenge but sky is the limit and learning never ends</li>
+        <li>
+          There&apos;s always more than one way to get to the desired result
+        </li>
+        <li>
+          It&apos;s a challenge but sky is the limit and learning never ends
+        </li>
         <li>Freedom to be creative and expressive</li>
         <li>The community and collaboration</li>
         <li>Takes focus, practice, routine, and dicipline</li>
@@ -66,27 +70,25 @@ export default function About() {
       <br />
       <p>My tech stack:</p>
       <ul className='flex flex-wrap gap-3'>
-        <li className='bg-purple-400'>JavaScript</li>
-        <li className='bg-purple-400'>TypeScript</li>
-        <li className='bg-purple-400'>React</li>
-        <li className='bg-purple-400'>Next.js</li>
-        <li className='bg-purple-400'>Tailwind CSS</li>
-        <li className='bg-purple-400'>Node.js</li>
-        <li className='bg-purple-400'>Express</li>
-        <li className='bg-purple-400'>SQL</li>
-        <li className='bg-purple-400'>NoSQL</li>
-        <li className='bg-purple-400'>Webpack</li>
-        <li className='bg-purple-400'>Docker</li>
-        <li className='bg-purple-400'>TDD (Jest, SuperTest)</li>
-        <li className='bg-purple-400'>Authentication (BCrypt, OAuth)</li>
+        <li id='purple'>JavaScript</li>
+        <li id='purple'>TypeScript</li>
+        <li id='purple'>React</li>
+        <li id='purple'>Next.js</li>
+        <li id='purple'>Tailwind CSS</li>
+        <li id='purple'>Node.js</li>
+        <li id='purple'>Express</li>
+        <li id='purple'>SQL</li>
+        <li id='purple'>NoSQL</li>
+        <li id='purple'>Webpack</li>
+        <li id='purple'>Docker</li>
+        <li id='purple'>TDD (Jest, SuperTest)</li>
+        <li id='purple'>Authentication (BCrypt, OAuth)</li>
 
-        <li className='bg-purple-400'>Git</li>
-        <li className='bg-purple-400'>
-          AWS (Elastic Beanstalk, EC2, S3, RDS, IAM)
-        </li>
-        <li className='bg-purple-400'>Google Cloud Console</li>
-        <li className='bg-purple-400'>Figma</li>
-        <li className='bg-purple-400'>Jira</li>
+        <li id='purple'>Git</li>
+        <li id='purple'>AWS (Elastic Beanstalk, EC2, S3, RDS, IAM)</li>
+        <li id='purple'>Google Cloud Console</li>
+        <li id='purple'>Figma</li>
+        <li id='purple'>Jira</li>
       </ul>
     </section>
   );

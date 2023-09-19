@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, Close } from '@mui/icons-material';
+import ThemeButton from './ThemeButton';
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -57,6 +58,9 @@ function NavBar() {
                 <Link href='#connect' onClick={() => setNavbar(!navbar)}>
                   Connect
                 </Link>
+              </li>
+              <li>
+                <ThemeButton />
               </li>
             </ul>
           </div>
