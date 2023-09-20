@@ -2,6 +2,8 @@ import { getBlog } from '../../../sanity/sanity.utils';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import Link from 'next/link';
 export default async function Blog() {
   const posts = await getBlog();
   console.log('this is posts', posts);
@@ -22,11 +24,11 @@ export default async function Blog() {
           <h2>Category: {post.category}</h2>
           <div className='truncate'>
             <PortableText value={post.content} />
-            ...
+            <p>...</p>
           </div>
-          <p>
-            Read the full post <ArrowForwardIcon />
-          </p>
+          <Link href={`/blogs/${post.slug}`} className=' hover:text-purple-400'>
+            Read the full post <ArrowForwardIcon sx={{ fontSize: 16 }} />
+          </Link>
         </div>
       </div>,
     );
@@ -36,7 +38,11 @@ export default async function Blog() {
     <section id='blog' className='pt-20'>
       <h1 className='text-lg text-purple-400 pb-1'>Blog</h1>
 
-      {blogPosts}
+      <div className='pb-2'>{blogPosts}</div>
+      <Link href='/blogs' className=' hover:text-purple-400'>
+        <AutoAwesomeIcon sx={{ fontSize: 18 }} />
+        Check out all blogs here
+      </Link>
     </section>
   );
 }

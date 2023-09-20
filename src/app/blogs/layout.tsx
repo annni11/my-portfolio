@@ -1,0 +1,17 @@
+import { Inter } from 'next/font/google';
+import NavBarBlog from '../components/NavBarBlog';
+const inter = Inter({ subsets: ['latin'] });
+export default function BlogLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <body id='blog-page' className={`${inter.className} container p-2 mx-auto`}>
+      <div className='font-mono text-sm h-screen'>
+        <NavBarBlog />
+        <div className='flex flex-row flex-wrap py-20'>{children}</div>
+      </div>
+    </body>
+  );
+}
