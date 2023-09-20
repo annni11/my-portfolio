@@ -35,7 +35,7 @@ function NavBarBlog() {
                 </Link>
               </li>
               <li className='relative text-l w-fit block after:block after:content-after:absolute after:h-[3px] after:bg-purple-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center'>
-                <Link href='/blogs' onClick={() => setNavbar(!navbar)}>
+                <Link href='/blog' onClick={() => setNavbar(!navbar)}>
                   Blogs
                 </Link>
               </li>

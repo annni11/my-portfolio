@@ -7,7 +7,9 @@ import Pic from './components/Pic';
 import Blog from './blog/page';
 import Info from './components/Info';
 import { ThemeProvider } from 'next-themes';
-
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import Link from 'next/link';
+import BlogList from './components/blogList';
 export default function Home() {
   return (
     <div className='font-mono text-sm'>
@@ -22,8 +24,16 @@ export default function Home() {
           <About />
           <Experience />
           <Projects />
-          {/* @ts-expect-error Server Component */}
-          <Blog />
+
+          <section id='blog' className='pt-20'>
+            <h1 className='text-lg text-purple-400 pb-1'>Blog</h1>
+            {/* @ts-expect-error Server Component */}
+            <BlogList />
+          </section>
+          <Link href='/blog' className=' hover:text-purple-400'>
+            <AutoAwesomeIcon sx={{ fontSize: 18 }} />
+            Check out all blogs here
+          </Link>
           <Connect />
           <Info />
         </div>
