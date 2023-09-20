@@ -2,10 +2,10 @@ import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
 import { schemaTypes } from './sanity/schemas';
 const config = defineConfig({
-  projectId: 'q2ly7mdt',
+  projectId: 'tyxwi1vi',
   dataset: 'production',
-  title: 'Annabelle-portfolio',
-  apiVersion: '2023-07-17',
+  title: 'annabelle-blogs',
+  apiVersion: '2023-09-19',
   basePath: '/admin',
   plugins: [deskTool()],
   schema: {

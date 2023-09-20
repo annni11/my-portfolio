@@ -1,65 +1,55 @@
-import {defineField, defineType} from 'sanity'
-
-export default defineType({
-  name: 'post',
-  title: 'Post',
+const post = {
+  name: 'blogs',
+  title: 'Blogs',
   type: 'document',
   fields: [
-    defineField({
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
-    }),
-    defineField({
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      options: { source: 'title' },
+    },
+    {
+      name: 'category',
+      title: 'Category',
+      type: 'string',
       options: {
-        source: 'title',
-        maxLength: 96,
+        list: [
+          { title: 'Book Recs', value: 'Book Recs' },
+          { title: 'Movie Reviews', value: 'Movie Reviews' },
+          { title: 'Yoga', value: 'Yoga' },
+          { title: 'Food', value: 'Food' },
+          { title: 'Simba', value: 'Simba' },
+          { title: 'Travel', value: 'Travel' },
+          { title: 'Other', value: 'Other' },
+        ],
       },
-    }),
-    defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    }),
-    defineField({
-      name: 'mainImage',
-      title: 'Main image',
+    },
+    {
+      name: 'image',
+      title: 'Image',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'categories',
-      title: 'Categories',
+      options: { hotspot: true },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string',
+        },
+      ],
+    },
+    {
+      name: 'content',
+      title: 'Content',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    }),
+      of: [{ type: 'block' }],
+    },
   ],
+};
 
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
-})
+export default post;
