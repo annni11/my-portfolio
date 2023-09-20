@@ -3,36 +3,50 @@ import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
+import { table } from 'console';
 
 export default async function BlogList() {
   const posts = await getBlog();
   console.log('this is posts', posts);
-  const blogPosts = [];
+  const blogImg = [];
+  const blogTxt = [];
   posts.forEach(post => {
-    blogPosts.push(
-      <div key={post._id} className='flex flex-row flex-wrap max-w-full pb-2'>
-        <div id='left-side' className='w-full sm:w-1/6'>
-          <Image
-            src={post.image}
-            alt={post.title}
-            width={110}
-            height={110}
-            className='rounded-full aspect-square object-cover'></Image>
+    blogImg.push(
+      <div className='pb-2'>
+        <Image
+          src={post.image}
+          alt={post.title}
+          width={110}
+          height={110}
+          className='rounded-full aspect-square object-cover'></Image>
+      </div>,
+    );
+    blogTxt.push(
+      <div>
+        <Link
+          href={`/blog/${post.slug}`}
+          className=' underline hover:text-purple-400'>
+          {post.title}
+        </Link>
+        <p>Category: {post.category}</p>
+        <div className='truncate'>
+          <PortableText value={post.content} />
         </div>
-        <div id='right-side' className='w-full sm:w-5/6'>
-          <h1>{post.title}</h1>
-          <h2>Category: {post.category}</h2>
-          <div className='truncate'>
-            <PortableText value={post.content} />
-            <p>...</p>
-          </div>
-          <Link href={`/blog/${post.slug}`} className=' hover:text-purple-400'>
-            Read the full post <ArrowForwardIcon sx={{ fontSize: 16 }} />
-          </Link>
-        </div>
+        <p>...</p>
+        <Link href={`/blog/${post.slug}`} className=' hover:text-purple-400'>
+          Read the full post <ArrowForwardIcon sx={{ fontSize: 16 }} />
+        </Link>
       </div>,
     );
   });
 
-  return <div className='pb-2 w-full'>{blogPosts}</div>;
+  return (
+    <div className='flex flex-row'>
+      <div className='flex flex-col w-30 gap-2'>{blogImg}</div>
+
+      <div className='flex flex-col w-full gap-2 overflow-hidden'>
+        {blogTxt}
+      </div>
+    </div>
+  );
 }

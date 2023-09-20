@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className='!scroll-smooth'>
-      <body className={`${inter.className} container p-2 mx-auto`}>
+      <body className={`${inter.className} container p-2 mx-auto w-screen`}>
         <Providers>{children}</Providers>
       </body>
     </html>

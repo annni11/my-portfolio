@@ -5,7 +5,7 @@ export async function getBlog() {
     projectId: 'tyxwi1vi',
     dataset: 'production',
     apiVersion: '2023-09-19',
-    useCdn: false,
+    useCdn: true,
   });
 
   return client.fetch(

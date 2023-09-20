@@ -7,7 +7,7 @@ import Pic from './components/Pic';
 import Info from './components/Info';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import Link from 'next/link';
-import BlogList from './components/blogList';
+import BlogList from './components/BlogList';
 
 export default function Home() {
   return (
@@ -29,6 +29,7 @@ export default function Home() {
             {/* @ts-expect-error Server Component */}
             <BlogList />
           </section>
+
           <Link href='/blog' className=' hover:text-purple-400'>
             <AutoAwesomeIcon sx={{ fontSize: 18 }} />
             Check out all blogs here
