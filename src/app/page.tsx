@@ -4,12 +4,11 @@ import About from './about/page';
 import Projects from './projects/page';
 import Connect from './components/Connect';
 import Pic from './components/Pic';
-import Blog from './blog/page';
 import Info from './components/Info';
-import { ThemeProvider } from 'next-themes';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import Link from 'next/link';
 import BlogList from './components/blogList';
+
 export default function Home() {
   return (
     <div className='font-mono text-sm'>

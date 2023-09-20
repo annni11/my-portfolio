@@ -4,7 +4,7 @@ import { PortableText } from '@portabletext/react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
 
-export default async function blogList() {
+export default async function BlogList() {
   const posts = await getBlog();
   console.log('this is posts', posts);
   const blogPosts = [];

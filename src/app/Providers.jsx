@@ -3,7 +3,7 @@
 import { ThemeProvider } from 'next-themes';
 
 const Providers = ({ children }) => {
-  return <ThemeProvider attribute='data-theme'>{children}</ThemeProvider>;
+  return <ThemeProvider>{children}</ThemeProvider>;
 };
 
 export default Providers;
