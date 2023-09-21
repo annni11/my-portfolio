@@ -18,8 +18,8 @@ export default async function BlogPage({ params }: Props) {
       <Image
         src={post.image}
         alt={post.title}
-        width={500}
-        height={500}
+        width={300}
+        height={300}
         className='border-solid border-4 border-purple-300 rounded-full aspect-square object-cover block mx-auto'></Image>
 
       <article className='pt-5'>
