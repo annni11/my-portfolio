@@ -11,7 +11,7 @@ export default async function BlogList() {
   const blogTxt: any = [];
   posts.forEach(post => {
     blogImg.push(
-      <div className='pb-2' key={post._createdAt}>
+      <div className='pb-3' key={post._createdAt}>
         <Image
           src={post.image}
           alt={post.title}
@@ -40,10 +40,10 @@ export default async function BlogList() {
   });
 
   return (
-    <div className='flex flex-row'>
-      <div className='flex flex-col w-30 gap-2'>{blogImg}</div>
+    <div className='flex flex-row gap-1'>
+      <div className='flex flex-col w-30 gap-5'>{blogImg}</div>
 
-      <div className='flex flex-col w-full gap-2 overflow-hidden'>
+      <div className='flex flex-col w-full gap-4 overflow-hidden'>
         {blogTxt}
       </div>
     </div>

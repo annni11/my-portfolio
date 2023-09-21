@@ -40,7 +40,7 @@ export default function About() {
         </li>
         <li>Freedom to be creative and expressive</li>
         <li>The community and collaboration</li>
-        <li>Takes focus, practice, routine, and dicipline</li>
+        <li>Takes focus, practice, routine, and discipline</li>
       </ul>
       <br />
       <p>Some more hobbies:</p>
@@ -85,7 +85,7 @@ export default function About() {
         <li id='purple'>Authentication (BCrypt, OAuth)</li>
 
         <li id='purple'>Git</li>
-        <li id='purple'>AWS (Elastic Beanstalk, EC2, S3, RDS, IAM)</li>
+        <li id='purple'>AWS (EB, EC2, S3, RDS, IAM)</li>
         <li id='purple'>Google Cloud Console</li>
         <li id='purple'>Figma</li>
         <li id='purple'>Jira</li>

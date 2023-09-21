@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className='font-mono text-sm'>
       <NavBar />
-      <div className='flex flex-row flex-wrap py-20'>
+      <div className='flex flex-row flex-wrap py-20 px-2'>
         <aside id='left-side' className='w-full sm:w-1/3  px-2'>
           <div className='sticky top-16 p-4'>
             <Pic />
@@ -24,7 +24,7 @@ export default function Home() {
           <Experience />
           <Projects />
 
-          <section id='blog' className='pt-20'>
+          <section id='blog' className='pt-20 pr-3'>
             <h1 className='text-lg text-purple-400 pb-1'>Blog</h1>
 
             <BlogList />
