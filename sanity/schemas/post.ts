@@ -26,6 +26,7 @@ const post = {
           { title: 'Food', value: 'Food' },
           { title: 'Simba', value: 'Simba' },
           { title: 'Travel', value: 'Travel' },
+          { title: 'Code & Tech', value: 'Code & Tech' },
           { title: 'Other', value: 'Other' },
         ],
       },

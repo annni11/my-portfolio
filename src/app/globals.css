@@ -17,13 +17,13 @@
     --purple: 192, 132, 252;
   }
 } */
-
+/* 
 [data-theme='dark'] {
   --foreground-rgb: 250, 245, 255;
   --background-start-rgb: 16, 16, 20;
   --background-end-rgb: 10, 9, 11;
   --purple: 192, 132, 252;
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));

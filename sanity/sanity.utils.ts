@@ -1,11 +1,12 @@
 import { createClient, groq } from 'next-sanity';
+import { Blog } from '../types/Blog';
 
-export async function getBlog() {
+export async function getBlog(): Promise<Blog[]> {
   const client = createClient({
     projectId: 'tyxwi1vi',
     dataset: 'production',
     apiVersion: '2023-09-19',
-    useCdn: true,
+    useCdn: false,
   });
 
   return client.fetch(
@@ -15,13 +16,13 @@ export async function getBlog() {
     title,
     category,
     "slug": slug.current,
-      "image": image.asset->url,
-      content
+    "image": image.asset->url,
+    content
     }`,
   );
 }
 
-export async function getBlogPage(slug: string) {
+export async function getBlogPage(slug: string): Promise<Blog> {
   const client = createClient({
     projectId: 'tyxwi1vi',
     dataset: 'production',
@@ -29,7 +30,6 @@ export async function getBlogPage(slug: string) {
     useCdn: true,
   });
 
-  console.log(slug);
   return client.fetch(
     groq`*[_type == "blogs" && slug.current == $slug][0]{
     _id,

@@ -1,11 +1,11 @@
-import BlogList from '../components/blogList';
+import BlogList from '../components/BlogList';
 
 export default async function Blog() {
   return (
-    <div>
+    <main className='w-full pt-20'>
       {/* @ts-expect-error Server Component */}
 
       <BlogList />
-    </div>
+    </main>
   );
 }

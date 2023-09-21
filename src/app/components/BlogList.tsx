@@ -3,13 +3,12 @@ import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
-import { table } from 'console';
 
 export default async function BlogList() {
   const posts = await getBlog();
-  console.log('this is posts', posts);
-  const blogImg = [];
-  const blogTxt = [];
+
+  const blogImg: any = [];
+  const blogTxt: any = [];
   posts.forEach(post => {
     blogImg.push(
       <div className='pb-2'>
