@@ -26,7 +26,7 @@ export default function Home() {
 
           <section id='blog' className='pt-20'>
             <h1 className='text-lg text-purple-400 pb-1'>Blog</h1>
-            {/* @ts-expect-error Server Component */}
+            {/* @ts-expect-error Async Server Component */}
             <BlogList />
           </section>
 

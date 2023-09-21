@@ -1,10 +1,9 @@
 import BlogList from '../components/BlogList';
 
-export default async function Blog() {
+export default function Blog() {
   return (
     <main className='w-full pt-20'>
-      {/* @ts-expect-error Server Component */}
-
+      {/* @ts-expect-error Async Server Component */}
       <BlogList />
     </main>
   );
