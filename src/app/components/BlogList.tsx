@@ -11,7 +11,7 @@ export default async function BlogList() {
   const blogTxt: any = [];
   posts.forEach(post => {
     blogImg.push(
-      <div className='pb-2'>
+      <div className='pb-2' key={post._createdAt}>
         <Image
           src={post.image}
           alt={post.title}
@@ -21,7 +21,7 @@ export default async function BlogList() {
       </div>,
     );
     blogTxt.push(
-      <div>
+      <div key={post.slug}>
         <Link
           href={`/blog/${post.slug}`}
           className=' underline hover:text-purple-400'>
