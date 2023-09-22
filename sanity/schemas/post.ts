@@ -1,5 +1,5 @@
 const post = {
-  name: 'blogs',
+  name: 'blog',
   title: 'Blogs',
   type: 'document',
   fields: [

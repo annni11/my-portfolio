@@ -27,21 +27,15 @@ export default function About() {
         My current location is <PushPin /> NYC
       </p>
       <br />
-      <p>Why I love yoga and coding:</p>
-      <p className='italic'>
-        yoga and coding have more similarities than you think!
+      <p>
+        Why I love yoga and coding:{' '}
+        <Link
+          href={'/blog/why-i-love-yoga-and-coding'}
+          className='italic hover:text-purple-400'>
+          read it on my blog here!
+        </Link>
       </p>
-      <ul className='list-disc'>
-        <li>
-          There&apos;s always more than one way to get to the desired result
-        </li>
-        <li>
-          It&apos;s a challenge but sky is the limit and learning never ends
-        </li>
-        <li>Freedom to be creative and expressive</li>
-        <li>The community and collaboration</li>
-        <li>Takes focus, practice, routine, and discipline</li>
-      </ul>
+
       <br />
       <p>Some more hobbies:</p>
       <ul>

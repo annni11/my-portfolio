@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import StarIcon from '@mui/icons-material/Star';
 
 export default function Experience() {
   return (
@@ -18,44 +19,30 @@ export default function Experience() {
         visualizer. A powerful all-in-one SQL database management tool
       </p>
 
-      <ul className='list-disc'>
-        <li>
-          Centralized front-end state management (20% conversion) with React
-          hooks to create global state for single source of truth to maintain
-          ease of state accessibility throughout the tremendous growth of the
-          app from past contributions
-        </li>
-        <li>
-          Restructured prior monolithic back-end architecture to follow modern
-          design patterns - separating business logic and decoupling long winded
-          code which led to improved work-flow, better unit testing, and
-          extendability for future contributors
-        </li>
-        <li>
-          Integrated functionality of import and export of databases and queries
-          using SQL command-line utility to allow for backup, restore and
-          recovery incase of database failure or corruption
-        </li>
-        <li>
-          Configured server login and authorization of multiple users and roles
-          to ensure proper access and permissions are enforced
-        </li>
-        <li>
-          Consolidated deprecated code to reduce technical debt and updated
-          outdated dependencies by 99%, increased unit testing coverage by 10%
-          with Jest
-        </li>
-        <li>
-          Product developed under tech accelerator OS Labs&nbsp;
-          <Link
-            href='http://opensourcelabs.io/'
-            rel='noopener noreferrer'
-            target='_blank'
-            className='hover:text-purple-400'>
-            (opensourcelabs.io)
-          </Link>
-        </li>
-      </ul>
+      <p>
+        The latest SeeQR v12 has launched: The Maintainability Update.&nbsp;
+        <Link
+          href='https://medium.com/@theseeqr/seeqr-v-12-the-maintainability-update-caa14fe3933f'
+          rel='noopener noreferrer'
+          target='_blank'
+          className='italic hover:text-purple-400'>
+          Read the Medium article here!
+        </Link>
+        &nbsp;The back-end got a complete upgrade with updated dependencies,
+        refactor of deprecated code, and restructure of prior monolithic
+        long-winded files. Heavy emphasizes was put on modularity, test-ability,
+        and scalability. Front-end is also getting a makeover, bringing it up to
+        date from its legacy code base and implementing modern React state
+        management techniques and hooks. SeeQR is developed under tech
+        accelerator OS Labs&nbsp;
+        <Link
+          href='http://opensourcelabs.io/'
+          rel='noopener noreferrer'
+          target='_blank'
+          className='hover:text-purple-400'>
+          (opensourcelabs.io).
+        </Link>
+      </p>
     </div>
   );
 }
