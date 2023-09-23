@@ -5,11 +5,15 @@ const config = {
   projectId: 'tyxwi1vi',
   dataset: 'production',
   apiVersion: '2023-09-19',
-  useCdn: false,
 };
 
 export async function getBlog(): Promise<Blog[]> {
-  const client = createClient(config);
+  const client = createClient({
+    projectId: 'tyxwi1vi',
+    dataset: 'production',
+    apiVersion: '2023-09-19',
+    useCdn: false,
+  });
 
   return client.fetch(
     groq`*[_type == 'blogs']{
