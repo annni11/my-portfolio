@@ -1,37 +1,34 @@
 import { createClient, groq } from 'next-sanity';
-import { Blog } from '../types/Blog';
+import { Blog, Project } from '../types/Blog';
+
+const config = {
+  projectId: 'tyxwi1vi',
+  dataset: 'production',
+  apiVersion: '2023-09-19',
+  useCdn: false,
+};
 
 export async function getBlog(): Promise<Blog[]> {
-  const client = createClient({
-    projectId: 'tyxwi1vi',
-    dataset: 'production',
-    apiVersion: '2023-09-19',
-    useCdn: true,
-  });
+  const client = createClient(config);
 
   return client.fetch(
-    groq`*[_type == "blogs"]{
+    groq`*[_type == 'blogs']{
     _id,
     _createdAt,
     title,
     category,
-    "slug": slug.current,
-    "image": image.asset->url,
+    'slug': slug.current,
+    'image': image.asset->url,
     content
     }`,
   );
 }
 
 export async function getBlogPage(slug: string): Promise<Blog> {
-  const client = createClient({
-    projectId: 'tyxwi1vi',
-    dataset: 'production',
-    apiVersion: '2023-09-19',
-    useCdn: true,
-  });
+  const client = createClient(config);
 
   return client.fetch(
-    groq`*[_type == "blogs" && slug.current == $slug][0]{
+    groq`*[_type == 'blogs' && slug.current == $slug][0]{
     _id,
     _createdAt,
     title,
@@ -40,6 +37,23 @@ export async function getBlogPage(slug: string): Promise<Blog> {
       "image": image.asset->url,
       content
     }`,
+    { slug },
+  );
+}
+
+export async function getProjectPage(slug: string): Promise<Project> {
+  const client = createClient(config);
+
+  return client.fetch(
+    groq`*[_type == "project" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      title,
+      description,
+      "slug": slug.current,
+      "images": images[].asset->url ,
+      content
+      }`,
     { slug },
   );
 }

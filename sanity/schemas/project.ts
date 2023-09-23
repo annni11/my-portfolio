@@ -23,8 +23,6 @@ const project = {
       name: 'images',
       title: 'Images',
       type: 'array',
-      options: { hotspot: true },
-
       of: [
         {
           type: 'image',
@@ -35,6 +33,7 @@ const project = {
               type: 'string',
             },
           ],
+          options: { hotspot: true },
         },
       ],
     },

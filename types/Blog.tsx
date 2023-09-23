@@ -9,3 +9,14 @@ export type Blog = {
   image: string;
   content: PortableTextBlock[];
 };
+
+export type Project = {
+  images: any;
+  id: string;
+  _createdAt: any;
+  title: string;
+  description: string;
+  slug: string;
+  image: string[];
+  content: PortableTextBlock[];
+};

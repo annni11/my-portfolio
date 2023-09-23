@@ -1,13 +1,14 @@
 import Experience from './experience/page';
 import NavBar from './components/NavBar';
 import About from './about/page';
-import Projects from './projects/page';
+import Projects from './projects/pollse/page';
 import Connect from './components/Connect';
 import Pic from './components/Pic';
 import Info from './components/Info';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import Link from 'next/link';
 import BlogList from './components/BlogList';
+import ProjectList from './components/ProjectList';
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         <div id='right-side' className=' w-full sm:w-2/3  pt-1 px-2'>
           <About />
           <Experience />
-          <Projects />
+          <ProjectList />
 
           <section id='blog' className='pt-20 pr-3'>
             <h1 className='text-lg text-purple-400 pb-1'>Blog</h1>
