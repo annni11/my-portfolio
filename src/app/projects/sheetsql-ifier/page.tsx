@@ -6,8 +6,6 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 export default async function Projects() {
   const project = await getProjectPage('sheetsql-ifier');
 
-  console.log('this is sheets:', project);
-
   const projectImages: any = [];
 
   project.images.forEach((image: string | StaticImport) => {

@@ -6,8 +6,6 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 export default async function Projects() {
   const project = await getProjectPage('pollse');
 
-  console.log('this is pollse:', project);
-
   const projectImages: any = [];
 
   project.images.forEach((image: string | StaticImport) => {

@@ -8,7 +8,7 @@ export default function BlogLayout({
 }) {
   return (
     <div id='blog-page' className={`${inter.className} container p-2 mx-auto`}>
-      <div className='font-mono text-sm min-h-full px-40'>
+      <div className='font-mono text-sm min-h-full sm:px-40 md:px-60'>
         <NavBarBlog />
         <div className='flex flex-row flex-wrap py-20'>{children}</div>
       </div>

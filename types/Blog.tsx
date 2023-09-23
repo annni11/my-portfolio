@@ -4,6 +4,7 @@ export type Blog = {
   id: string;
   _createdAt: any;
   title: string;
+  description: string;
   category: string;
   slug: string;
   image: string;

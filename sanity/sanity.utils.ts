@@ -5,21 +5,35 @@ const config = {
   projectId: 'tyxwi1vi',
   dataset: 'production',
   apiVersion: '2023-09-19',
+  useCdn: false,
 };
 
-export async function getBlog(): Promise<Blog[]> {
-  const client = createClient({
-    projectId: 'tyxwi1vi',
-    dataset: 'production',
-    apiVersion: '2023-09-19',
-    useCdn: false,
-  });
+export async function getBlogSlice(): Promise<Blog[]> {
+  const client = createClient(config);
 
   return client.fetch(
-    groq`*[_type == 'blogs']{
+    groq`*[_type == 'blogs' || "blogs"] | order(_createdAt) {
     _id,
     _createdAt,
     title,
+    description,
+    category,
+    'slug': slug.current,
+    'image': image.asset->url,
+    content
+    }[0...3]`,
+  );
+}
+
+export async function getBlogFull(): Promise<Blog[]> {
+  const client = createClient(config);
+
+  return client.fetch(
+    groq`*[_type == 'blogs' || "blogs"]{
+    _id,
+    _createdAt,
+    title,
+    description,
     category,
     'slug': slug.current,
     'image': image.asset->url,
@@ -36,6 +50,7 @@ export async function getBlogPage(slug: string): Promise<Blog> {
     _id,
     _createdAt,
     title,
+    description,
     category,
     'slug': slug.current,
       'image': image.asset->url,
