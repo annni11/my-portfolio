@@ -33,8 +33,8 @@ export async function getBlogPage(slug: string): Promise<Blog> {
     _createdAt,
     title,
     category,
-    "slug": slug.current,
-      "image": image.asset->url,
+    'slug': slug.current,
+      'image': image.asset->url,
       content
     }`,
     { slug },

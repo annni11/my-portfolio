@@ -13,17 +13,15 @@ export default async function BlogList() {
   posts.forEach(post => {
     console.log('this is image!', post.image);
     blog.push(
-      <div className='flex flex-row'>
-        <div key={post._createdAt}>
-          <Image
-            src={post.image}
-            alt={post.title}
-            width={110}
-            height={110}
-            className='rounded-full aspect-square object-cover'></Image>
-        </div>
+      <div className='flex flex-row gap-2'>
+        <Image
+          src={post.image}
+          alt={post.title}
+          width={110}
+          height={110}
+          className='rounded-full aspect-square object-cover'></Image>
 
-        <div key={post.slug} className='w-full'>
+        <div key={post.slug}>
           <Link
             href={`/blog/${post.slug}`}
             className=' underline hover:text-purple-400'>
@@ -33,7 +31,7 @@ export default async function BlogList() {
           <div className='truncate h-5'>
             <PortableText value={post.content} />
           </div>
-          <p>...</p>
+
           <Link href={`/blog/${post.slug}`} className=' hover:text-purple-400'>
             Read the full post <ArrowForwardIcon sx={{ fontSize: 16 }} />
           </Link>
@@ -42,5 +40,5 @@ export default async function BlogList() {
     );
   });
 
-  return <div className='flex flex-col'>{blog}</div>;
+  return <div className='flex flex-col gap-2'>{blog}</div>;
 }

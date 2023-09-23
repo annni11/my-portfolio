@@ -25,7 +25,7 @@ export default function Home() {
           <Experience />
           <ProjectList />
 
-          <section id='blog' className='pt-20 pr-3'>
+          <section id='blog' className='pt-20 pr-3 pb-3'>
             <h1 className='text-lg text-purple-400 pb-1'>Blog</h1>
 
             <BlogList />
