@@ -11,7 +11,7 @@ export default async function BlogList() {
 
   posts.forEach(post => {
     blog.push(
-      <div className='flex flex-row gap-2'>
+      <div key={`blogList+${post._createdAt}`} className='flex flex-row gap-2'>
         <Image
           src={post.image}
           alt={post.title}

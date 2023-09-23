@@ -9,7 +9,7 @@ export default async function Blog() {
 
   posts.forEach(post => {
     blog.push(
-      <div className='flex flex-row'>
+      <div key={`blogPage+${post._createdAt}`} className='flex flex-row'>
         <Image
           src={post.image}
           alt={post.title}

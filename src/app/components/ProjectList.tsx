@@ -8,16 +8,16 @@ export default function ProjectList() {
       <p className='text-zinc-500 italic'>
         Application for gathering consensus with real-time response view
       </p>
-      <Link href={`/projects/pollse`}>
+      <Link href={`/projects/#pollse`} className='hover:text-purple-400'>
         View project <ArrowForwardIcon sx={{ fontSize: 16 }} />
       </Link>
-      <br />
+      <p>-</p>
       <p>SheetsQL-ifier</p>
       <p className='text-zinc-500 italic'>
         Application for import and export between Google Sheets and PostgresQL
         databases
       </p>
-      <Link href={'/projects/sheetsql-ifier'}>
+      <Link href={'/projects/#sheetsql'} className='hover:text-purple-400'>
         View project <ArrowForwardIcon sx={{ fontSize: 16 }} />
       </Link>
     </section>
