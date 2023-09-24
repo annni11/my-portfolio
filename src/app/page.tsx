@@ -33,7 +33,7 @@ export default function Home() {
 
           <Link href='/blog' className=' hover:text-purple-400'>
             <AutoAwesomeIcon sx={{ fontSize: 18 }} />
-            Check out all blogs here
+            Read all blogs here
           </Link>
           <Connect />
           <Info />
