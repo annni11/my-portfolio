@@ -14,7 +14,7 @@ export default async function BlogPage({ params }: Props) {
 
   const date = post._createdAt.slice(0, 10);
   return (
-    <div className='w-full pt-20'>
+    <div className='w-full pt-20 px-2'>
       <Image
         src={post.image}
         alt={post.title}

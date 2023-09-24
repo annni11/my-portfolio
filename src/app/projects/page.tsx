@@ -5,7 +5,7 @@ import SheetsProject from './sheetsql-ifier/page';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 export default function ProjectsPage() {
   return (
-    <div className='font-mono text-sm'>
+    <div className='font-mono text-sm px-2'>
       <NavBarProject />
       <main>
         <PollseProject />
