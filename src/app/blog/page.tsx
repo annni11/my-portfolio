@@ -1,5 +1,6 @@
 import { getBlogFull } from '../../../sanity/sanity.utils';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Image from 'next/image';
 import Link from 'next/link';
 export default async function Blog() {
@@ -36,6 +37,9 @@ export default async function Blog() {
     <main>
       <h1 className='text-lg text-purple-400 pb-1'>Blogs:</h1>
       <section className='flex flex-col gap-5'>{blog}</section>
+      <Link href='/#blogs' className=' hover:text-purple-400'>
+        <ArrowBackIcon sx={{ fontSize: 16 }} /> Back to home
+      </Link>
     </main>
   );
 }

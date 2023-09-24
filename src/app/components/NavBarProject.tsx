@@ -25,20 +25,6 @@ function NavBarProject() {
         </div>
 
         <div>
-          <Link
-            href='#pollse'
-            onClick={() => setNavbar(!navbar)}
-            className='hover:text-purple-400'>
-            Pollse /
-          </Link>
-          <Link
-            href='#sheetsql'
-            onClick={() => setNavbar(!navbar)}
-            className='hover:text-purple-400'>
-            / SheetsQL-ifier
-          </Link>
-        </div>
-        <div>
           <div
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
               navbar ? 'p-12 md:p-0 block' : 'hidden'

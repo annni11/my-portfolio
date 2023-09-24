@@ -17,7 +17,7 @@ export default async function PollseProject() {
           alt={project.title}
           width={250}
           height={250}
-          className='rounded-xl'></Image>
+          className='border-solid border-2 border-zinc-500 rounded-xl'></Image>
       </div>,
     );
   });
@@ -25,6 +25,8 @@ export default async function PollseProject() {
   return (
     <section id='pollse' className='pt-20'>
       <div>
+        <h1 className='text-lg text-purple-400 pb-1'>Project:</h1>
+
         <h1 className='text-lg pb-3'>Pollse</h1>
         <p className='text-zinc-500 italic'>{project.description}</p>
         <Link

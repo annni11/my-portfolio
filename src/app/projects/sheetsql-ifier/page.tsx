@@ -17,7 +17,7 @@ export default async function SheetsProject() {
           alt={project.title}
           width={300}
           height={300}
-          className='rounded-xl'></Image>
+          className='border-solid border-2 border-zinc-500 rounded-xl '></Image>
       </div>,
     );
   });
@@ -25,6 +25,7 @@ export default async function SheetsProject() {
   return (
     <section id='sheetsql' className='pt-20'>
       <div>
+        <h1 className='text-lg text-purple-400 pb-1'>Project:</h1>
         <h1 className='text-lg pb-3'>SheetsQL-ifier</h1>
         <p className='text-zinc-500 italic'>{project.description}</p>
         <Link
