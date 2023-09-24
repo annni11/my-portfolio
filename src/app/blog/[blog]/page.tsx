@@ -24,6 +24,7 @@ export default async function BlogPage({ params }: Props) {
 
       <article className='pt-5'>
         <h1 className='text-2xl text-purple-400'>{post.title}</h1>
+        <h1 className='italic'>{post.description}</h1>
         <h2>Category: {post.category}</h2>
         <h2>Published on: {date}</h2>
         <div className='py-5'>

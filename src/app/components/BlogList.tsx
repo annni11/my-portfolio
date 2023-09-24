@@ -25,7 +25,7 @@ export default async function BlogList() {
             className=' underline hover:text-purple-400'>
             {post.title}
           </Link>
-          <p>Category: {post.category}</p>
+
           <p className='italic'>{post.description}</p>
 
           <Link href={`/blog/${post.slug}`} className=' hover:text-purple-400'>
