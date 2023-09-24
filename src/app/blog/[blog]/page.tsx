@@ -22,7 +22,7 @@ export default async function BlogPage({ params }: Props) {
         height={300}
         className='border-solid border-4 border-purple-300 rounded-full aspect-square object-cover block mx-auto'></Image>
 
-      <article className='pt-5'>
+      <article className='pt-5 pb-12'>
         <h1 className='text-2xl text-purple-400'>{post.title}</h1>
         <h1 className='italic'>{post.description}</h1>
         <br />

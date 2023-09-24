@@ -12,7 +12,7 @@ export default function ProjectsPage() {
 
         <SheetsProject />
       </main>
-      <div className='pt-8'>
+      <div className='pt-20'>
         <Link href='/#projects' className=' hover:text-purple-400'>
           <ArrowBackIcon sx={{ fontSize: 16 }} /> Back to home
         </Link>

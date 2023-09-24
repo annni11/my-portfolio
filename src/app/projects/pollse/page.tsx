@@ -27,18 +27,19 @@ export default async function PollseProject() {
       <div>
         <h1 className='text-lg text-purple-400 pb-1'>Project:</h1>
 
-        <h1 className='text-lg pb-3'>Pollse</h1>
+        <h1 className='text-lg'>Pollse</h1>
         <p className='text-zinc-500 italic'>{project.description}</p>
+        <br />
         <Link
           href='https://github.com/CTRI17-Pikachu/Pollse'
           rel='noopener noreferrer'
           target='_blank'
           className='underline hover:text-purple-400'>
-          Github
+          GitHub
         </Link>
         <PortableText value={project.content} />
       </div>
-
+      <hr className='w-full h-1 mx-auto my-4' />
       <div className='flex flex-wrap gap-3'>{projectImages}</div>
     </section>
   );

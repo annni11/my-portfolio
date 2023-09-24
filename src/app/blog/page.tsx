@@ -36,7 +36,7 @@ export default async function Blog() {
   return (
     <main>
       <h1 className='text-lg text-purple-400 pb-1'>Blogs:</h1>
-      <section className='flex flex-col gap-5'>{blog}</section>
+      <section className='flex flex-col gap-8 pt-5 pb-20'>{blog}</section>
       <Link href='/#blogs' className=' hover:text-purple-400'>
         <ArrowBackIcon sx={{ fontSize: 16 }} /> Back to home
       </Link>
