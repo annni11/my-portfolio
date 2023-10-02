@@ -3,7 +3,7 @@ import { GitHub, LinkedIn, Email } from '@mui/icons-material';
 
 export default function Socials() {
   return (
-    <footer className='flex flex-row bottom-0 w-full py-2 px-2 gap-5 '>
+    <footer className='flex flex-row bottom-0 w-full px-2 gap-5 '>
       <Link href='mailto:ann.j.ni@gmail.com'>
         <Email
           sx={{

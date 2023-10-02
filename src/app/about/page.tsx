@@ -13,7 +13,7 @@ import Link from 'next/link';
 export default function About() {
   return (
     <section id='about' className='pt-20'>
-      <h1 className='text-lg text-purple-400 pb-1'>About me</h1>
+      <h1 className='text-lg text-purple-400 pb-3'>About me</h1>
       <p>Hello, World!</p>
       <p>My name is Annabelle</p>
       <p>

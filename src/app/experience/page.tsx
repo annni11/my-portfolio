@@ -4,7 +4,7 @@ import StarIcon from '@mui/icons-material/Star';
 export default function Experience() {
   return (
     <div id='experience' className='pt-20'>
-      <h1 className='text-lg text-purple-400 pb-1'>Experience</h1>
+      <h1 className='text-lg text-purple-400 pb-3'>Experience</h1>
       <p>Software Engineer</p>
       <Link
         href='http://www.seeqrapp.com/'
@@ -25,8 +25,8 @@ export default function Experience() {
           href='https://medium.com/@theseeqr/seeqr-v-12-the-maintainability-update-caa14fe3933f'
           rel='noopener noreferrer'
           target='_blank'
-          className='italic hover:text-purple-400'>
-          Read the Medium article here!
+          className='underline hover:text-purple-400'>
+          Medium Article.
         </Link>
         &nbsp;The back-end got a complete upgrade with updated dependencies,
         refactor of deprecated code, and restructure of prior monolithic
