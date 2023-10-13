@@ -50,13 +50,13 @@ export default function About() {
           <Pets sx={{ fontSize: 15 }} /> Playing with my dog Simba
         </li>
         <li>
-          <Checkroom sx={{ fontSize: 15 }} /> Upcycling fashion&nbsp;
+          <Checkroom sx={{ fontSize: 15 }} /> Upcycling fashion on&nbsp;
           <Link
             href='https://poshmark.com/closet/fifevintage'
             rel='noopener noreferrer'
             target='_blank'
-            className='hover:text-purple-400'>
-            (check out my poshmark)
+            className='italic hover:text-purple-400'>
+            Poshmark
           </Link>
         </li>
       </ul>
@@ -76,8 +76,7 @@ export default function About() {
         <li id='purple'>Webpack</li>
         <li id='purple'>Docker</li>
         <li id='purple'>TDD (Jest, SuperTest)</li>
-        <li id='purple'>Authentication (BCrypt, OAuth)</li>
-
+        <li id='purple'>Authentication (OAuth)</li>
         <li id='purple'>Git</li>
         <li id='purple'>AWS (EB, EC2, S3, RDS, IAM)</li>
         <li id='purple'>Google Cloud Console</li>

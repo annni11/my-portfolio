@@ -5,7 +5,7 @@ import Projects from './projects/pollse/page';
 import Connect from './components/Connect';
 import Pic from './components/Pic';
 import Info from './components/Info';
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
 import BlogList from './components/BlogList';
 import ProjectList from './components/ProjectList';
@@ -32,8 +32,7 @@ export default function Home() {
           </section>
 
           <Link href='/blog' className=' hover:text-purple-400'>
-            <AutoAwesomeIcon sx={{ fontSize: 18 }} />
-            Read all blogs here
+            Read all blogs <ArrowForwardIcon sx={{ fontSize: 16 }} />
           </Link>
           <Connect />
           <Info />

@@ -12,7 +12,7 @@ function NavBar() {
       <div className='justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8'>
         <div>
           <div className='flex items-center justify-between py-3 md:py-5 md:block'>
-            <Link href='#home'>
+            <Link href='/'>
               <h2 className='text-2xl text-purple-400 '>AN</h2>
             </Link>
 

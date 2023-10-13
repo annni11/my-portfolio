@@ -11,36 +11,43 @@ export default function Experience() {
         rel='noopener noreferrer'
         target='_blank'
         className='underline hover:text-purple-400'>
-        SeeQR
+        <b>SeeQR</b>
       </Link>
       <p className='text-zinc-500 italic'>
         Open Source Electron based desktop application for SQL database query
-        performance testing and entity relationship diagram 2D and 3D
-        visualizer. A powerful all-in-one SQL database management tool
+        performance testing and entity relationship diagram 2D and 3D visualizer
       </p>
-
+      <br />
+      <p>Delivered high-quality, production-ready code across the full stack</p>
       <p>
-        The latest SeeQR v12 has launched: The Maintainability Update.&nbsp;
-        <Link
-          href='https://medium.com/@theseeqr/seeqr-v-12-the-maintainability-update-caa14fe3933f'
-          rel='noopener noreferrer'
-          target='_blank'
-          className='underline hover:text-purple-400'>
-          Medium Article.
-        </Link>
-        &nbsp;The back-end got a complete upgrade with updated dependencies,
-        refactor of deprecated code, and restructure of prior monolithic
-        long-winded files. Heavy emphasizes was put on modularity, test-ability,
-        and scalability. Front-end is also getting a makeover, bringing it up to
-        date from its legacy code base and implementing modern React state
-        management techniques and hooks. SeeQR is developed under tech
-        accelerator OS Labs&nbsp;
+        <b>Backend:</b> complete upgrade with updated dependencies, refactor of
+        deprecated code, and restructure of prior monolithic long-winded files.
+        Heavy emphasizes was put on modularity, test-ability, and scalability.
+      </p>
+      <p>
+        <b>Front-end:</b> brought it up to date from its legacy code base and
+        implemented modern React state management techniques and hooks.
+      </p>
+      <br />
+      <p>
+        SeeQR is developed under tech accelerator OS Labs&nbsp;
         <Link
           href='http://opensourcelabs.io/'
           rel='noopener noreferrer'
           target='_blank'
-          className='hover:text-purple-400'>
+          className=' italic hover:text-purple-400'>
           (opensourcelabs.io).
+        </Link>
+      </p>
+
+      <p>
+        Medium Article:&nbsp;
+        <Link
+          href='https://medium.com/@theseeqr/seeqr-v-12-the-maintainability-update-caa14fe3933f'
+          rel='noopener noreferrer'
+          target='_blank'
+          className='italic hover:text-purple-400'>
+          The Maintainability Update
         </Link>
       </p>
     </div>

@@ -7,7 +7,8 @@ export default function ProjectList() {
       <div>
         <p>Pollse</p>
         <p className='text-zinc-500 italic'>
-          Application for gathering consensus with real-time response view
+          Application for gathering consensus with real-time response view using
+          Socket.io
         </p>
         <Link href={`/projects/#pollse`} className='hover:text-purple-400'>
           View project <ArrowForwardIcon sx={{ fontSize: 16 }} />
